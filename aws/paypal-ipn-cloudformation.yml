@@ -191,7 +191,7 @@ Resources:
             - import boto3
             - import time
             - print('Loading function')
-            - sns = boto3.client('sns')
+            - sns = boto3.client('sns', region_name='us-east-2')
             - 'def lambda_handler(event, context):'
             - '  print("Received event: " + json.dumps(event, indent=2))'
             - '  response = sns.publish('
@@ -227,7 +227,7 @@ Resources:
             - import time
             - from urllib2 import urlopen
             - print('Loading function')
-            - sqs = boto3.client('sqs')
+            - sqs = boto3.client('sqs', region_name='us-east-2')
             - 'def lambda_handler(event, context):'
             - '  print("Delivering event: " + json.dumps(event, indent=2))'
             - '  containedMessage = event["Records"][0]["Sns"]["Message"]'
