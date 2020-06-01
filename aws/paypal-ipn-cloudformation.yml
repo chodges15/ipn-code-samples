@@ -293,7 +293,7 @@ Resources:
         Type: AWS
         IntegrationHttpMethod: POST
         Credentials: !GetAtt APIGatewayReceiverRole.Arn
-        Uri: !Sub arn:aws:apigateway:ap-southeast-2:lambda:path/2015-03-31/functions/${ReceiverLambda.Arn}/invocations
+        Uri: !Sub arn:aws:apigateway:us-east-2:lambda:path/2015-03-31/functions/${ReceiverLambda.Arn}/invocations
         PassthroughBehavior: WHEN_NO_TEMPLATES
         IntegrationResponses:
         - StatusCode: 200
